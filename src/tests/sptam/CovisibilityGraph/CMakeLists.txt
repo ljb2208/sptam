@@ -9,7 +9,7 @@ include_directories(${SPTAM_INCLUDE_DIRS})
 add_executable(test_CovisibilityGraph test_CovisibilityGraph.cpp ${SPTAM_SOURCE_DIRS}/utils/CovisibilityGraph.cpp)
 
 # Link test executable against gtest & gtest_main
-target_link_libraries(test_CovisibilityGraph gtest gtest_main ${Boost_LIBRARIES})
+target_link_libraries(test_CovisibilityGraph gtest gtest_main pthread ${Boost_LIBRARIES})
 
 add_test(
   NAME test_CovisibilityGraph
